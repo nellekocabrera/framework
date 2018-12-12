@@ -17,10 +17,13 @@ Route::get('/', function () {
     return view('test');
 });
 
+
+Route::get('/testcontroller/{id}', 'TestController@show');
+
 // Login View
 
 Route::get('/login', function(){
-	return view('coreui');
+	// return view('coreui');
 });
 
 // Orders View
