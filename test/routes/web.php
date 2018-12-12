@@ -43,3 +43,8 @@ Route::get('/inventory', function(){
 Route::get('/profile', function(){
 	return view('profile');
 });
+
+Route::resource('student', 'StudenController');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
