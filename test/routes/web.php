@@ -17,10 +17,13 @@ Route::get('/', function () {
     return view('test');
 });
 
+
+Route::get('/testcontroller/{id}', 'TestController@show');
+
 // Login View
 
 Route::get('/login', function(){
-	return view('login');
+	// return view('coreui');
 });
 
 // Orders View
@@ -40,3 +43,8 @@ Route::get('/inventory', function(){
 Route::get('/profile', function(){
 	return view('profile');
 });
+
+Route::resource('student', 'StudenController');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
